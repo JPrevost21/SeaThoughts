@@ -1,0 +1,162 @@
+@import "vars.scss";
+
+.logo {
+  position: relative;
+  top: 50px;
+  height: 143px;
+  background-image: url("/assets/images/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+$infoPadding: 32px;
+$infoSize: 65px;
+
+.info {
+  position: absolute;
+  top: $infoPadding;
+  right: $infoPadding;
+
+  height: $infoSize;
+  width: $infoSize;
+
+  font-size: 48px;
+  font-family: inherit;
+  font-weight: lighter;
+  text-align: center;
+
+  border: none;
+  border-radius: 50%;
+  outline: none;
+
+  cursor: pointer;
+  
+  color: $colorText;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+}
+
+.cta {
+  /* Positioning */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  /* Sizing */
+  height: 100px;
+  width: 724px;
+
+  /* Font Manipulation */
+  font-size: 39px;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: lighter;
+  letter-spacing: 8px;
+
+  /* Borders */
+  border: none;
+  border-radius: 30px;
+  outline: none;
+
+  /* Colors Decorations */
+  background-color: white;
+  color: $colorText;
+  box-shadow: 0 0 114px rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
+}
+
+.sub-text {
+  /* Positioning */
+  position: absolute;
+  bottom: 250px;
+  left: 0;
+  width: 100%;
+
+  /* Font Manipulation */
+  text-align: center;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: lighter;
+
+  /* Colors Decorations */
+  color: $colorTextMuted;
+}
+
+$bottleWidth: 150px;
+
+.floater {
+  position: absolute;
+  bottom: -100px;
+  left: -$bottleWidth;
+
+  animation: bobbing-animation 1s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes bobbing-animation {
+  from {
+    transform: translateY(-20px);
+  }
+
+  to {
+    transform: translateY(20px);
+  }
+}
+
+.slider {
+  position: relative;
+  animation: slider-animation 20s linear infinite;
+}
+
+@keyframes slider-animation {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX( calc(100vw + #{$bottleWidth}) );
+  }
+}
+
+.bottle {
+  position: relative;
+
+  background-image: url("/assets/images/bottle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  width: $bottleWidth;
+  height: 320px;
+
+  transform-origin: center;
+}
+
+.rotating {
+  animation: rotating-animation 3.35s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes rotating-animation {
+  from {
+    transform: rotate(-10deg);
+  }
+
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+.paper {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 15px;
+  height: 70%;
+
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+
+  border-radius: 3px;
+}

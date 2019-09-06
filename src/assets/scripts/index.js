@@ -38,14 +38,13 @@ let app = new Vue({
      * Submits the user's thought to the database
      */
     submit: function() {
-      console.log(this.submissionTextInput);
       this.loading = true;
 
-      // TODO: send to server
-  
-      setTimeout(() => {
+      this.db.collection('thoughts').add({
+        thought: this.submissionTextInput
+      }).then(() => {
         this.confirmation = true;
-      }, 1000);
+      });
     },
 
     /**

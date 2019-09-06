@@ -37,7 +37,7 @@
           <div class="bounce3"></div>
         </div>
         <p class="sending">
-          Sending Message...
+          Loading...
         </p>
       </div>
 
@@ -54,10 +54,11 @@
 
       <div class="display-none" v-bind:class="{ active: viewing }">
         <button v-on:click="goHome" class="homeButton">&#60;</button>
-        <p class="sending centered">This is a sample message <br> This is a sample second line </p>
+        <p class="sending centered">{{currentThought}}</p>
       </div>
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
     <script src="assets/scripts/index.js"></script>
   </body>
 </html>

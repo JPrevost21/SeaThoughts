@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  margin: 0 100px;
 }
 
 $infoPadding: 32px;
@@ -46,6 +47,7 @@ $infoSize: 65px;
   /* Sizing */
   height: 100px;
   width: 724px;
+  max-width: 90%;
 
   /* Font Manipulation */
   font-size: 39px;

@@ -38,13 +38,17 @@ let app = new Vue({
      * Submits the user's thought to the database
      */
     submit: function() {
-      this.loading = true;
+      if (this.submissionTextInput.trim().length === 0) {
+        alert('You cant send an empty message!');
+      } else {
+        this.loading = true;
 
-      this.db.collection('thoughts').add({
-        thought: this.submissionTextInput
-      }).then(() => {
-        this.confirmation = true;
-      });
+        this.db.collection('thoughts').add({
+          thought: this.submissionTextInput.trim()
+        }).then(() => {
+          this.confirmation = true;
+        });
+      }
     },
 
     /**

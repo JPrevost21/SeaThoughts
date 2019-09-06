@@ -1,0 +1,67 @@
+@media (max-height: 780px) {
+  .sub-text {
+    bottom: 150px;
+  }
+
+  .slider {
+    animation: slider-animation-small 20s linear infinite !important;
+  }
+
+  .floater {
+    bottom: -130px;
+  }
+
+  .cta {
+    font-size: 29px;
+    height: 70px;
+    width: 624px;
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  .sending {
+    bottom: 20px;
+  }
+}
+
+@media (max-height: 640px) {
+  .bottle-confirmation {
+    transform: translateX(-50%) translateY(-50%) scale(0.75);
+  }
+}
+
+@media (max-width: 720px) {
+  .cta {
+    font-size: 20px;
+    height: 70px;
+    width: 624px;
+  }
+
+  .inputText {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 550px) {
+  .logo {
+    margin: 0 20px;
+  }
+
+  .info {
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@keyframes slider-animation-small {
+  from {
+    transform: translateX(0) scale(0.6);
+  }
+
+  to {
+    transform: translateX( calc(100vw + #{$bottleWidth}) ) scale(0.6);
+  }
+}
